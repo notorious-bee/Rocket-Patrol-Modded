@@ -1,3 +1,8 @@
+/* POINTS BREAKDOWN
+   -Create new artwork for all of the in-game assets (rocket, spaceships, explosion) (25)
+   -
+*/
+
 let config = {
     type: Phaser.CANVAS,
     width: 640,
