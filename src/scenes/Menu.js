@@ -26,6 +26,7 @@ class Menu extends Phaser.Scene {
         }
 
         // show menu text
+        this.load.image('title background', './assets/title background.png');
         let centerX = game.config.width/2;
         let centerY = game.config.height/2;
         let textSpacer = 64;
