@@ -57,7 +57,6 @@ class Play extends Phaser.Scene {
         let scoreConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
-            backgroundColor: '#1F2463',
             color: '#FFFFFF',
             align: 'right',
             padding: {
@@ -66,8 +65,8 @@ class Play extends Phaser.Scene {
             },
             fixedWidth: 100
         }
-        //this.add.text(42, 54, 'SCORE: ', scoreConfig);
-        this.scoreLeft = this.add.text(96, 54, 'SCORE: ', this.p1Score, scoreConfig);
+        this.add.text(42, 54, 'SCORE: ', scoreConfig);
+        this.scoreLeft = this.add.text(96, 54, this.p1Score, scoreConfig);
 
         // FIRE UI display
         let fireText = {
