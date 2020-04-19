@@ -67,6 +67,21 @@ class Play extends Phaser.Scene {
         }
         this.scoreLeft = this.add.text(69, 54, this.p1Score, scoreConfig);
 
+        // FIRE UI display
+        let fireText = {
+            fontFamily: 'Courier',
+            fontSize: '28px',
+            backgroundColor: '#F3B141',
+            color: '#843605',
+            align: 'right',
+            padding: {
+                top: 5,
+                bottom: 5,
+            },
+            fixedWidth: 100
+        }
+        this.add.text(150, 54, 'FIRE', fireText);
+
         // game over flag
         this.gameOver = false;
         
