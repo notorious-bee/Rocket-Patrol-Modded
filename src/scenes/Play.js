@@ -25,14 +25,14 @@ class Play extends Phaser.Scene {
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
         // new rectangle borders
-        /*
+        
         this.add.rectangle(5, 5, 630, 32, 0xFFFFFF).setOrigin(0, 0); //up
         this.add.rectangle(5, 443, 630, 32, 0xFFFFFF).setOrigin(0, 0); //down
         this.add.rectangle(5, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0); //left
         this.add.rectangle(603, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0); //right
-        */
         
-        this.borderUp = new Borders(this, 5, 5, 'UI border_up').setOrigin(0, 0);
+        
+        //this.borderUp = new Borders(this, 5, 5, 'UI border_up').setOrigin(0, 0);
         
 
         // add rocket (p1)
