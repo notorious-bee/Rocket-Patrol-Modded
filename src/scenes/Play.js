@@ -32,7 +32,7 @@ class Play extends Phaser.Scene {
         this.add.rectangle(603, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0); //right
         */
 
-        this.add.image(320, 10, 'UI border_up');
+        this.add.image(320, 20, 'UI border_up');
         
 
         // add rocket (p1)
