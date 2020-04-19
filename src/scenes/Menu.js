@@ -18,7 +18,7 @@ class Menu extends Phaser.Scene {
         this.titleBackground = this.add.tileSprite(0, 0, 640, 480, 'title background').setOrigin(0, 0);
 
         let menuConfig = {
-            fontFamily: 'Tahoma',
+            fontFamily: 'Courier',
             fontSize: '28px',
             backgroundColor: '#F3B141',
             color: '#843605',
