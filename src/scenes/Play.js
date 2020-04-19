@@ -9,23 +9,33 @@ class Play extends Phaser.Scene {
         this.load.image('spaceship', './assets/spaceship.png');
         this.load.image('starfield', './assets/starfield.png');
         this.load.image('small spaceship', './assets/small spaceship.png');
+
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
+
+        // load boarders
+        this.load.image('UI boarder_up', './assets/UI boarder_up.png');
+        this.load.image('UI boarder_down', './assets/UI boarder_down.png');
+        this.load.image('UI boarder_right', './assets/UI boarder_right.png');
+        this.load.image('UI boarder_left', './assets/UI boarder_left.png');
     }
 
     create() {
         // place tile sprite
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
-        // white rectangle borders
+        // new rectangle borders
+        //this.titleBackground = this.add.tileSprite(0, 0, 640, 480, 'title background').setOrigin(0, 0);
         this.add.rectangle(5, 5, 630, 32, 0xFFFFFF).setOrigin(0, 0);
-        this.add.rectangle(5, 443, 630, 32, 0xFFFFFF).setOrigin(0, 0);
+       // this.add.rectangle(5, 443, 630, 32, 0xFFFFFF).setOrigin(0, 0);
         this.add.rectangle(5, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0);
         this.add.rectangle(603, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0);
         /*
-        // new UI background
-        this.add.rectangle(37, 42, 566, 64, 0x6F4BCF).setOrigin(0, 0);
-        */
+        this.borderUp = this.add.tileSprite(5, 5, 630, 32, 'UI boarder_up').setOrigin(0, 0);
+        this.borderDown = this.add.tileSprite(5, 5, 630, 32, 'UI boarder_down').setOrigin(0, 0);
+        this.borderUp = this.add.tileSprite(5, 5, 630, 32, 'UI boarder_up').setOrigin(0, 0);
+        this.borderUp = this.add.tileSprite(5, 5, 630, 32, 'UI boarder_up').setOrigin(0, 0);
+    */
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
