@@ -7,7 +7,7 @@ class Play extends Phaser.Scene {
         //load images/title sprites
         this.load.image('rocket', './assets/rocket.png');
         this.load.image('spaceship', './assets/spaceship.png');
-        this.load.image('starfield', './assets/starfield.png');
+        this.load.image('new_starfield', './assets/starfield.png');
         this.load.image('small spaceship', './assets/small spaceship.png');
 
         // load spritesheet
@@ -22,7 +22,7 @@ class Play extends Phaser.Scene {
 
     create() {
         // place tile sprite
-        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
+        this.newStarfield = this.add.tileSprite(0, 0, 640, 480, 'new_starfield').setOrigin(0, 0);
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
