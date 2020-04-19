@@ -67,7 +67,7 @@ class Play extends Phaser.Scene {
             fixedWidth: 100
         }
         this.add.text(40, 54, 'SCORE: ', scoreConfig);
-        this.scoreLeft = this.add.text(84, 54, this.p1Score, scoreConfig);
+        this.scoreLeft = this.add.text(89, 54, this.p1Score, scoreConfig);
 
         // FIRE UI display
         let fireText = {
