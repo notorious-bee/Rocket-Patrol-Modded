@@ -78,7 +78,7 @@ class Play extends Phaser.Scene {
                 top: 5,
                 bottom: 5,
             },
-            fixedWidth: 75
+            fixedWidth: 70
         }
         this.add.text(300, 54, 'FIRE', fireText);
 
