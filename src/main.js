@@ -1,5 +1,6 @@
 /* POINTS BREAKDOWN
-    -Create a new scrolling tile sprite for the background (10)
+   -Create a new scrolling tile sprite for the background (10)
+   -Implement the 'FIRE' UI text from the original game (10)
    -Create new artwork for all of the in-game assets (rocket, spaceships, explosion) (25)
    -Create a new spaceship type that's smaller, moves faster, and is worth more points (25)
 */
