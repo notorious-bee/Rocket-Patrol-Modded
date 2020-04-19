@@ -80,7 +80,7 @@ class Play extends Phaser.Scene {
             },
             fixedWidth: 100
         }
-        this.add.text(150, 54, 'FIRE', fireText);
+        this.add.text(300, 54, 'FIRE', fireText);
 
         // game over flag
         this.gameOver = false;
