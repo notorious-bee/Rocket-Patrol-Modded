@@ -25,18 +25,17 @@ class Play extends Phaser.Scene {
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
         // new rectangle borders
-        //this.titleBackground = this.add.tileSprite(0, 0, 640, 480, 'title background').setOrigin(0, 0);
+        this.add.rectangle(5, 5, 630, 32, 'UI boarder_up').setOrigin(0, 0);
+        this.add.rectangle(5, 443, 630, 32, 'UI boarder_down').setOrigin(0, 0);
+        this.add.rectangle(5, 5, 32, 455, 'UI boarder_left').setOrigin(0, 0);
+        this.add.rectangle(603, 5, 32, 455, 'UI boarder_right').setOrigin(0, 0);
+        
         /*
-        this.add.rectangle(5, 5, 630, 32, 0xFFFFFF).setOrigin(0, 0);
-        this.add.rectangle(5, 443, 630, 32, 0xFFFFFF).setOrigin(0, 0); //down
-        this.add.rectangle(5, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0); //left
-        this.add.rectangle(603, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0); //right
-        */
-
         this.borderUp = this.add.tileSprite(5, 5, 630, 32, 'UI boarder_up').setOrigin(0, 0);
         this.borderDown = this.add.tileSprite(5, 443, 630, 32, 'UI boarder_down').setOrigin(0, 0);
         this.borderLeft = this.add.tileSprite(5, 5, 630, 455, 'UI boarder_left').setOrigin(0, 0);
         this.borderRight = this.add.tileSprite(603, 5, 630, 455, 'UI boarder_right').setOrigin(0, 0);
+        */
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
