@@ -6,7 +6,7 @@
 */
 
 let config = {
-    type: Phaser.CANVAS,
+    type: 'title background.png',
     width: 640,
     height: 480,
     scene: [ Menu, Play ]
