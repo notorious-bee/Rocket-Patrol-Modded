@@ -95,6 +95,9 @@ class Play extends Phaser.Scene {
             this.ship01.update();
             this.ship02.update();
             this.ship03.update();
+
+            // update new spaceship
+            this.newShip.update();
         }
 
         // check collisions
