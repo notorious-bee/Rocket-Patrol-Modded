@@ -24,30 +24,22 @@ class Play extends Phaser.Scene {
         // place tile sprite
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
-        // new rectangle borders
-        /*
-        this.add.rectangle(5, 5, 630, 32, 0xFFFFFF).setOrigin(0, 0); //up
-        this.add.rectangle(5, 443, 630, 32, 0xFFFFFF).setOrigin(0, 0); //down
-        this.add.rectangle(5, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0); //left
-        this.add.rectangle(603, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0); //right
-        */
-
-        this.add.image(320, 16, 'UI border_up');
-        this.add.image(320, 464, 'UI border_down');
-        this.add.image(16, 240, 'UI border_left');
-        this.add.image(624, 240, 'UI border_right');
-        
-
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
-
+        
         // add spaceships (x3)
         this.ship01 = new Spaceship(this, game.config.width + 192, 132, 'spaceship', 0, 30).setOrigin(0, 0);
         this.ship02 = new Spaceship(this, game.config.width + 96, 196, 'spaceship', 0, 20).setOrigin(0, 0);
         this.ship03 = new Spaceship(this, game.config.width, 260, 'spaceship', 0, 10).setOrigin(0, 0);
-
+        
         // add small spaceship
         this.newShip = new New_Spaceship(this, game.config.width + 150, 150, 'small spaceship', 0, 69).setOrigin(0, 0);
+        
+        // new rectangle borders
+        this.add.image(320, 16, 'UI border_up');
+        this.add.image(320, 464, 'UI border_down');
+        this.add.image(16, 240, 'UI border_left');
+        this.add.image(624, 240, 'UI border_right');
 
         // define keys
         keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
