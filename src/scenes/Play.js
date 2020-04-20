@@ -47,13 +47,6 @@ class Play extends Phaser.Scene {
             frameRate: 30
         })
 
-        // new rectangle borders
-        this.add.image(320, 16, 'UI border_up');
-        this.add.image(320, 464, 'UI border_down');
-        this.add.image(16, 240, 'UI border_left');
-        this.add.image(624, 240, 'UI border_right');
- 
-
         // score
         this.p1Score = 0;
 
@@ -97,6 +90,12 @@ class Play extends Phaser.Scene {
             this.add.text(game.config.width/2, game.config.height/2 + 64, '(F)ire to Restart or ← for Menu', scoreConfig).setOrigin(0.5);
             this.gameOver = true;
         }, null, this);
+
+        // new rectangle borders
+        this.add.image(320, 16, 'UI border_up');
+        this.add.image(320, 464, 'UI border_down');
+        this.add.image(16, 240, 'UI border_left');
+        this.add.image(624, 240, 'UI border_right');
     }
 
     update() {
