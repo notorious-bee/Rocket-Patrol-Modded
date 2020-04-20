@@ -6,7 +6,8 @@
    -Create a new title screen (15)
         -Again with the scrolling tile sprite, I feel that the original background feels empty (also I remove the text borders to see the title background more)
    -Replace the UI borders with new artwork (15)
-        -Decided to go with a Gameboy Color-esque border (by adding them as images after the blocks of code for rocket and spaceship in order to overlap them)
+        -Decided to go with a Gameboy Color-esque border (by adding them as images after the blocks of code for rocket, spaceship, and explosion in order to overlap them)
+        -Title screen also gets borders for consistency
    -Create new artwork for all of the in-game assets (rocket, spaceships, explosion) (25)
    -Create a new spaceship type that's smaller, moves faster, and is worth more points (25)
         -The smaller spaceship is worth 69 points (nice)

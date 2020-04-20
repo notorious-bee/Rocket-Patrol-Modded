@@ -35,12 +35,6 @@ class Play extends Phaser.Scene {
         // add small spaceship
         this.newShip = new New_Spaceship(this, game.config.width + 150, 150, 'small spaceship', 0, 69).setOrigin(0, 0);
         
-        // new rectangle borders
-        this.add.image(320, 16, 'UI border_up');
-        this.add.image(320, 464, 'UI border_down');
-        this.add.image(16, 240, 'UI border_left');
-        this.add.image(624, 240, 'UI border_right');
-
         // define keys
         keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
@@ -52,6 +46,13 @@ class Play extends Phaser.Scene {
             frames: this.anims.generateFrameNumbers('explosion', {start: 0, end: 9, first: 0}),
             frameRate: 30
         })
+
+        // new rectangle borders
+        this.add.image(320, 16, 'UI border_up');
+        this.add.image(320, 464, 'UI border_down');
+        this.add.image(16, 240, 'UI border_left');
+        this.add.image(624, 240, 'UI border_right');
+ 
 
         // score
         this.p1Score = 0;
