@@ -11,11 +11,23 @@ class Menu extends Phaser.Scene {
 
         // load title background
         this.load.image('title background', './assets/title background.png');
+
+        // load borders
+        this.load.image('UI border_up', './assets/UI border_up.png');
+        this.load.image('UI border_down', './assets/UI border_down.png');
+        this.load.image('UI border_right', './assets/UI border_right.png');
+        this.load.image('UI border_left', './assets/UI border_left.png');
     }
 
     create() {
         // menu display
         this.titleBackground = this.add.tileSprite(0, 0, 640, 480, 'title background').setOrigin(0, 0);
+
+         // new rectangle borders
+         this.add.image(320, 16, 'UI border_up');
+         this.add.image(320, 464, 'UI border_down');
+         this.add.image(16, 240, 'UI border_left');
+         this.add.image(624, 240, 'UI border_right');
 
         let menuConfig = {
             fontFamily: 'Courier',
