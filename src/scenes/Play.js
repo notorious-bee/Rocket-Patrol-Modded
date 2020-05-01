@@ -23,8 +23,8 @@ class Play extends Phaser.Scene {
 
     create() {
         // place tile sprite
-        this.load.spritesheet('starfield', './assets/rave background2.png', {frameWidth: 680, frameHeight: 57, startFrame: 0, endFrame: 113.3}).setOrigin(0, 0);
-        //this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
+        this.load.spritesheet('starfield', './assets/rave background2.png', {frameWidth: 680, frameHeight: 57, startFrame: 0, endFrame: 113.3});
+        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
