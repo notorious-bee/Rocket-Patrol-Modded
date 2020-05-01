@@ -7,12 +7,12 @@ class Play extends Phaser.Scene {
         //load images/title sprites
         this.load.image('rocket', './assets/rocket.png');
         this.load.image('spaceship', './assets/spaceship.png');
-        this.load.image('starfield', './assets/new_starfield.png');
+        //this.load.image('starfield', './assets/rave background.png');
+        //this.load.image('starfield', './assets/new_starfield.png');
         this.load.image('small spaceship', './assets/small spaceship.png');
 
         // load spritesheet
-        //this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
-        this.load.spritesheet('explosion', './assets/rave background.png', {frameWidth: 7200, frameHeight: 600, startFrame: 0, endFrame: 1200});
+        this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
 
         // load borders
         this.load.image('UI border_up', './assets/UI border_up.png');
@@ -23,7 +23,8 @@ class Play extends Phaser.Scene {
 
     create() {
         // place tile sprite
-        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
+        this.load.spritesheet('starfield', './assets/rave background.png', {frameWidth: 7200, frameHeight: 600, startFrame: 0, endFrame: 1200}).setOrigin(0, 0);
+        //this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
