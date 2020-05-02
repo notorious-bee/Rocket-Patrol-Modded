@@ -28,14 +28,17 @@ class Play extends Phaser.Scene {
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
         
         //test
-        this.anims.create( {
-            key: 'crab_walk',
-            frames: this.anims.generateFrameNumbers('crab', {start: 0, end: 1, first: 0}),
-            frameRate: 2
-        })
+        var crabWalk = this.anims.create({
+            key: 'walk',
+            frames: this.anims.generateFrameNumbers('crab'),
+            framerate: 20,
+            repeat: 0
+        }),
+        var sprite = this.add.sprite(320, 240, 'crab').setScale(3);
 
-        let testing = this.add.sprite(0, 0, 'crab').setOrigin(0, 0);
-        testing.anims.play('crab');
+        sprite.play('walk');
+
+        sprite.anims.setRepeat(25);
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
