@@ -34,8 +34,6 @@ class Play extends Phaser.Scene {
             frameRate: 30
         })
 
-        this.add.sprite(0, 0, 'crab').setOrigin(0, 0);
-
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
         
@@ -166,7 +164,9 @@ class Play extends Phaser.Scene {
         ship.alpha = 0;
         // create explosion sprite at ship's position
         let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
+        let testing = this.add.sprite(0, 0, 'crab').setOrigin(0, 0);
         boom.anims.play('explode');
+        testing.anims.play('crab');
         boom.on('animationcomplete', () => {
             ship.reset();
             ship.alpha = 1;
