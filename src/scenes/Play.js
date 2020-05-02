@@ -31,7 +31,7 @@ class Play extends Phaser.Scene {
         this.anims.create( {
             key: 'crab_walk',
             frames: this.anims.generateFrameNumbers('crab', {start: 0, end: 1, first: 0}),
-            frameRate: 30
+            frameRate: 2
         })
 
         let testing = this.add.sprite(0, 0, 'crab').setOrigin(0, 0);
