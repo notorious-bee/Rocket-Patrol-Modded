@@ -34,7 +34,7 @@ class Play extends Phaser.Scene {
         this.add.sprite(300, 300, 'crab').setOrigin(0, 0);
 
         // place tile sprite
-        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
+        //this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
