@@ -20,7 +20,7 @@ class Play extends Phaser.Scene {
         this.load.image('UI border_left', './assets/UI border_left.png');
 
         //test
-        this.load.spritesheet('crab', './assets/time for crab.png', {frameWidth: 1074, frameHeight: 350, startFrame: 0, endFrame: 537});
+        this.load.spritesheet('crab', './assets/time for crab.png', {frameWidth: 1074, frameHeight: 350, startFrame: 0, endFrame: 1});
     }
 
     create() {
