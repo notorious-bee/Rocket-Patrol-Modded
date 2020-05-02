@@ -20,7 +20,7 @@ class Play extends Phaser.Scene {
         this.load.image('UI border_left', './assets/UI border_left.png');
 
         //test
-        this.load.spritesheet('crab', './assets/time for crab.png', {frameWidth: 1074, frameHeight: 350, startFrame: 0, endFrame: 1});
+        this.load.spritesheet('crab', './assets/time for crab.png', {frameWidth: 537, frameHeight: 350, startFrame: 0, endFrame: 1});
     }
 
     create() {
@@ -33,6 +33,9 @@ class Play extends Phaser.Scene {
             frames: this.anims.generateFrameNumbers('crab', {start: 0, end: 1, first: 0}),
             frameRate: 30
         })
+
+        let testing = this.add.sprite(0, 0, 'crab').setOrigin(0, 0);
+        testing.anims.play('crab');
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
@@ -164,9 +167,7 @@ class Play extends Phaser.Scene {
         ship.alpha = 0;
         // create explosion sprite at ship's position
         let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
-        let testing = this.add.sprite(0, 0, 'crab').setOrigin(0, 0);
         boom.anims.play('explode');
-        testing.anims.play('crab');
         boom.on('animationcomplete', () => {
             ship.reset();
             ship.alpha = 1;
