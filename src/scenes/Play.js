@@ -28,13 +28,13 @@ class Play extends Phaser.Scene {
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
         
         //test
-        var crabWalk = this.anims.create({
+        this.anims.create({
             key: 'walk',
             frames: this.anims.generateFrameNumbers('crab'),
             framerate: 20,
             repeat: 0
         }),
-        var sprite = this.add.sprite(320, 240, 'crab').setScale(3);
+        this.add.sprite(320, 240, 'crab').setScale(3);
 
         sprite.play('walk');
 
