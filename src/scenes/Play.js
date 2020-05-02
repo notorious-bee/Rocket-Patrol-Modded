@@ -19,16 +19,22 @@ class Play extends Phaser.Scene {
         this.load.image('UI border_right', './assets/UI border_right.png');
         this.load.image('UI border_left', './assets/UI border_left.png');
 
-        //testing purposes
-        this.load.atlas('crab','./assets/time for crab.png','./assets/time for crab.json')
+        //test
+        this.load.spritesheet('crab', './assets/time for crab.png', {frameWidth: 1074, frameHeight: 350, startFrame: 0, endFrame: 537});
     }
 
     create() {
-        // place tile sprite
-        //this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
-
         //test
-        this.crab = this.add.sprite(200,200,'crab');
+        this.anims.create( {
+            key: 'crab_walk',
+            frames: this.anims.generateFrameNumbers('crab', {start: 0, end: 1, first: 0}),
+            frameRate: 30
+        })
+
+        this.add.sprite(300, 300, 'crab').setOrigin(0, 0);
+
+        // place tile sprite
+        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
