@@ -20,7 +20,7 @@ class Play extends Phaser.Scene {
         this.load.image('UI border_left', './assets/UI border_left.png');
 
         //test
-        this.load.spritesheet('crab', './assets/time for crab.png', {frameWidth: 537, frameHeight: 350, startFrame: 0, endFrame: 1});
+        this.load.spritesheet('crab', './assets/time for crab.png', {frameWidth: 537, frameHeight: 350});
     }
 
     create() {
@@ -34,7 +34,7 @@ class Play extends Phaser.Scene {
             framerate: 20,
             repeat: 0
         }),
-        this.add.sprite(320, 240, 'crab').setScale(3);
+        this.add.sprite(320, 240, 'crab');
 
         sprite.play('walk');
 
