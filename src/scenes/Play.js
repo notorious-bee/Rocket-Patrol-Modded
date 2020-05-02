@@ -34,7 +34,7 @@ class Play extends Phaser.Scene {
             frameRate: 30
         })
 
-        this.add.sprite(300, 300, 'crab').setOrigin(0, 0);
+        this.add.sprite(320, 240, 'crab').setOrigin(0, 0);
 
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
