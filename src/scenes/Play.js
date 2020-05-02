@@ -40,6 +40,13 @@ class Play extends Phaser.Scene {
 
         sprite.anims.setRepeat(25);
 
+        this.tweens.add({
+            targets: sprite,
+            x: 100,
+            duration: 8800,
+            ease: 'Linear'
+        });
+
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2 - 8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
         
